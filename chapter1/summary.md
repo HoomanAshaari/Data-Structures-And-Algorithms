@@ -185,8 +185,7 @@ This behavior is called  automatic packing  of a tuple.
 
     return x,y
     
-=======
-1.9
+
 ## Comprehension Syntax:
    A very common programming task is to produce one series of values based upon
    the processing of another series. As an example the the general form of list comprehension is:
