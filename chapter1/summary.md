@@ -184,6 +184,34 @@ This behavior is called  automatic packing  of a tuple.
 * One common use of packing in Python is when returning multiple values from a function. If the body of a function executes the command,
 
     return x,y
+    
+=======
+1.9
+## Comprehension Syntax:
+   A very common programming task is to produce one series of values based upon
+   the processing of another series. As an example the the general form of list comprehension is:
+    
+        [ expression for value in iterable if condition ]
+
+
+
+    [ k*k for k in range(1, n+1) ]          list comprehension
+    { k*k for k in range(1, n+1) }          set comprehension
+    ( k*k for k in range(1, n+1) )          generator comprehension
+    { k : k*k for k in range(1, n+1) }      dictionary comprehension
+
+    **  The generator syntax is particularly attractive when results do not need to be stored
+      in memory. For example, to compute the sum of the first n squares, the generator 
+      syntax, total = sum(k*k for k in range(1, n+1)), is preferred to the use of an
+      explicitly instantiated list comprehension as the parameter.
+    
+
+Packing and Unpacking of sequences:
+    Python provides two conveniences involving the treatment of tuples and other sequence types.
+    If a series of comma=seprated expressions are given in a larger context, they will be treated as a single tuple, 
+    for example:
+    data = 2, 4, 6, 8
+    This behavior is called  automatic packing  of a tuple.
 
 it will be formally returning a single object that is the tuple (x, y).  
 As a dual to the packing behavior, python can automatically  unpack  a sequence, allowing one to assign a series of individual identifiers to the elements of sequence. As an examplem we can write
